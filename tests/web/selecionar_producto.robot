@@ -18,7 +18,7 @@ Selecionar Sauce Labs Backback
     Quando clico no produto    Sauce Labs Backpack    $29.99
     Entao sou direcionado para a pagina do produto
     Quando clico em adicionar para o carrinho
-    Entao visualizo o numero de items no carrinho
+    Entao visualizo o numero de items no carrinho    1
     Quando clico no icone do carrinho
     Entao sou direcionado para a pagina do carrinho
 
