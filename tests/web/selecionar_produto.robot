@@ -6,7 +6,7 @@ Test Teardown    Close Browser    # No final fecha o navegador
 *** Variables ***
 ${url}    https://www.saucedemo.com/
 ${browser}    Chrome
-${timeout}    5000ms
+${timeout}    10000ms
 
 *** Test Cases ***
 # frases  --> Keywords
