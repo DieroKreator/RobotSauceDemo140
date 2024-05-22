@@ -1,312 +1,275 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.0 (Python 3.11.8 on darwin)" generated="2024-05-20T21:04:42.074454" rpa="false" schemaversion="5">
-<suite id="s1" name="Selecionar Produto Po" source="/Users/dierokreator/Programming/Interasys/RobotSauceDemo140/tests/web/selecionar_produto_po.robot">
-<test id="s1-t1" name="Selecionar Mochila" line="8">
+<robot generator="Robot 7.0 (Python 3.11.8 on darwin)" generated="2024-05-20T22:48:03.564632" rpa="false" schemaversion="5">
+<suite id="s1" name="Po" source="/Users/dierokreator/Programming/Interasys/RobotSauceDemo140/tests/web/po">
+<kw name="Obter Data e hora" owner="base_page" type="SETUP">
+<kw name="Get Current Date" owner="DateTime">
+<msg time="2024-05-20T22:48:03.728750" level="INFO">${date} = 2024-05-20 22:48:03.729</msg>
+<var>${date}</var>
+<doc>Returns current local or UTC time with an optional increment.</doc>
+<status status="PASS" start="2024-05-20T22:48:03.728265" elapsed="0.003403"/>
+</kw>
+<kw name="Convert Date" owner="DateTime">
+<msg time="2024-05-20T22:48:03.735789" level="INFO">${date} = 2024.05.20_22.48.03</msg>
+<var>${date}</var>
+<arg>${date}</arg>
+<arg>result_format=%Y.%m.%d_%H.%M.%S</arg>
+<doc>Converts between supported `date formats`.</doc>
+<status status="PASS" start="2024-05-20T22:48:03.732316" elapsed="0.003798"/>
+</kw>
+<kw name="Set Global Variable" owner="BuiltIn">
+<msg time="2024-05-20T22:48:03.736782" level="INFO">${date} = 2024.05.20_22.48.03</msg>
+<msg time="2024-05-20T22:48:03.736963" level="INFO">${date} = None</msg>
+<var>${date}</var>
+<arg>${date}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<status status="PASS" start="2024-05-20T22:48:03.736436" elapsed="0.000629"/>
+</kw>
+<status status="PASS" start="2024-05-20T22:48:03.727045" elapsed="0.010170"/>
+</kw>
+<suite id="s1-s1" name="Selecionar Produto Po Ddt" source="/Users/dierokreator/Programming/Interasys/RobotSauceDemo140/tests/web/po/selecionar_produto_po_ddt.robot">
+<test id="s1-s1-t1" name="TC006" line="11">
 <kw name="Abrir navegador" owner="base_page" type="SETUP">
 <kw name="Register Keyword To Run On Failure" owner="SeleniumLibrary">
-<msg time="2024-05-20T21:04:42.244454" level="INFO">Tirar Screenshot will be run on failure.</msg>
-<arg>Tirar Screenshot</arg>
+<msg time="2024-05-20T22:48:03.751268" level="INFO">Tirar Screenshotß will be run on failure.</msg>
+<arg>Tirar Screenshotß</arg>
 <doc>Sets the keyword to execute, when a SeleniumLibrary keyword fails.</doc>
-<status status="PASS" start="2024-05-20T21:04:42.244099" elapsed="0.002575"/>
+<status status="PASS" start="2024-05-20T22:48:03.750812" elapsed="0.000721"/>
 </kw>
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2024-05-20T21:04:42.247854" level="INFO">Opening browser 'Chrome' to base url 'https://www.saucedemo.com'.</msg>
+<msg time="2024-05-20T22:48:03.752334" level="INFO">Opening browser 'Chrome' to base url 'https://www.saucedemo.com'.</msg>
 <arg>url=${url}</arg>
 <arg>browser=${browser}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2024-05-20T21:04:42.247070" elapsed="1.793076"/>
+<status status="PASS" start="2024-05-20T22:48:03.751833" elapsed="1.897121"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2024-05-20T21:04:44.041886" elapsed="0.715895"/>
+<status status="PASS" start="2024-05-20T22:48:05.650297" elapsed="0.330055"/>
 </kw>
 <kw name="Set Browser Implicit Wait" owner="SeleniumLibrary">
 <arg>10000ms</arg>
 <doc>Sets the implicit wait value used by Selenium.</doc>
-<status status="PASS" start="2024-05-20T21:04:44.758314" elapsed="0.001909"/>
+<status status="PASS" start="2024-05-20T22:48:05.980970" elapsed="0.002124"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>css=.login_logo</arg>
 <arg>${timeout}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-05-20T21:04:44.760825" elapsed="0.027453"/>
+<status status="PASS" start="2024-05-20T22:48:05.983679" elapsed="0.023454"/>
 </kw>
-<status status="PASS" start="2024-05-20T21:04:42.242870" elapsed="2.546046"/>
+<status status="PASS" start="2024-05-20T22:48:03.750022" elapsed="2.257488"/>
 </kw>
+<kw name="Selecionar Produto">
 <kw name="Tirar Screenshot" owner="base_page">
-<kw name="Get Current Date" owner="DateTime">
-<msg time="2024-05-20T21:04:44.790869" level="INFO">${date} = 2024-05-20 21:04:44.791</msg>
-<var>${date}</var>
-<doc>Returns current local or UTC time with an optional increment.</doc>
-<status status="PASS" start="2024-05-20T21:04:44.790443" elapsed="0.000674"/>
-</kw>
-<kw name="Convert Date" owner="DateTime">
-<msg time="2024-05-20T21:04:44.793993" level="INFO">${date} = 2024.05.20_21.04</msg>
-<var>${date}</var>
-<arg>${date}</arg>
-<arg>result_format=%Y.%m.%d_%H.%M</arg>
-<doc>Converts between supported `date formats`.</doc>
-<status status="PASS" start="2024-05-20T21:04:44.791418" elapsed="0.002802"/>
-</kw>
 <kw name="Capture Page Screenshot" owner="SeleniumLibrary">
-<msg time="2024-05-20T21:04:45.121493" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="screenshots/Selecionar%20Mochila/2024.05.20_21.04/1-Home.jpg"&gt;&lt;img src="screenshots/Selecionar%20Mochila/2024.05.20_21.04/1-Home.jpg" width="800px"&gt;&lt;/a&gt;</msg>
-<msg time="2024-05-20T21:04:45.121988" level="INFO">/Users/dierokreator/Programming/Interasys/RobotSauceDemo140/.venv/lib/python3.11/site-packages/selenium/webdriver/remote/webdriver.py:822: UserWarning: name used for saved screenshot does not match file type. It should end with a `.png` extension
+<msg time="2024-05-20T22:48:06.275844" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="screenshots/saucedemo/2024.05.20_22.48.03/TC006/1-Home.jpg"&gt;&lt;img src="screenshots/saucedemo/2024.05.20_22.48.03/TC006/1-Home.jpg" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2024-05-20T22:48:06.276291" level="INFO">/Users/dierokreator/Programming/Interasys/RobotSauceDemo140/.venv/lib/python3.11/site-packages/selenium/webdriver/remote/webdriver.py:822: UserWarning: name used for saved screenshot does not match file type. It should end with a `.png` extension
   return self.get_screenshot_as_file(filename)</msg>
-<arg>screenshots/${TEST_NAME}/${date}/${screenshot_name}.jpg</arg>
+<arg>screenshots/saucedemo/${date}/${TEST_NAME}/${screenshot_name}.jpg</arg>
 <doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<status status="PASS" start="2024-05-20T21:04:44.794613" elapsed="0.327898"/>
+<status status="PASS" start="2024-05-20T22:48:06.009058" elapsed="0.267748"/>
 </kw>
 <arg>1-Home</arg>
-<status status="PASS" start="2024-05-20T21:04:44.789838" elapsed="0.332883"/>
+<status status="PASS" start="2024-05-20T22:48:06.008647" elapsed="0.268464"/>
 </kw>
 <kw name="Preencher usuario" owner="login_page">
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-05-20T21:04:45.124005" level="INFO">Typing text 'standard_user' into text field 'css=[data-test="username"]'.</msg>
+<msg time="2024-05-20T22:48:06.278763" level="INFO">Typing text 'standard_user' into text field 'css=[data-test="username"]'.</msg>
 <arg>${txt_usuario}</arg>
 <arg>${usuario}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-05-20T21:04:45.123666" elapsed="0.367973"/>
+<status status="PASS" start="2024-05-20T22:48:06.278175" elapsed="0.267962"/>
 </kw>
 <arg>standard_user</arg>
-<status status="PASS" start="2024-05-20T21:04:45.123188" elapsed="0.368665"/>
+<status status="PASS" start="2024-05-20T22:48:06.277454" elapsed="0.268908"/>
 </kw>
 <kw name="Preencher senha" owner="login_page">
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-05-20T21:04:45.493087" level="INFO">Typing text 'secret_sauce' into text field 'css=[data-test="password"]'.</msg>
+<msg time="2024-05-20T22:48:06.547403" level="INFO">Typing text 'secret_sauce' into text field 'css=[data-test="password"]'.</msg>
 <arg>${txt_senha}</arg>
 <arg>${senha}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-05-20T21:04:45.492614" elapsed="0.295740"/>
+<status status="PASS" start="2024-05-20T22:48:06.547072" elapsed="0.164513"/>
 </kw>
 <arg>secret_sauce</arg>
-<status status="PASS" start="2024-05-20T21:04:45.492159" elapsed="0.296646"/>
+<status status="PASS" start="2024-05-20T22:48:06.546604" elapsed="0.165408"/>
 </kw>
 <kw name="Tirar Screenshot" owner="base_page">
-<kw name="Get Current Date" owner="DateTime">
-<msg time="2024-05-20T21:04:45.790819" level="INFO">${date} = 2024-05-20 21:04:45.791</msg>
-<var>${date}</var>
-<doc>Returns current local or UTC time with an optional increment.</doc>
-<status status="PASS" start="2024-05-20T21:04:45.790234" elapsed="0.000873"/>
-</kw>
-<kw name="Convert Date" owner="DateTime">
-<msg time="2024-05-20T21:04:45.792408" level="INFO">${date} = 2024.05.20_21.04</msg>
-<var>${date}</var>
-<arg>${date}</arg>
-<arg>result_format=%Y.%m.%d_%H.%M</arg>
-<doc>Converts between supported `date formats`.</doc>
-<status status="PASS" start="2024-05-20T21:04:45.791662" elapsed="0.000967"/>
-</kw>
 <kw name="Capture Page Screenshot" owner="SeleniumLibrary">
-<msg time="2024-05-20T21:04:46.105348" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="screenshots/Selecionar%20Mochila/2024.05.20_21.04/2-Login%20Preenchido.jpg"&gt;&lt;img src="screenshots/Selecionar%20Mochila/2024.05.20_21.04/2-Login%20Preenchido.jpg" width="800px"&gt;&lt;/a&gt;</msg>
-<arg>screenshots/${TEST_NAME}/${date}/${screenshot_name}.jpg</arg>
+<msg time="2024-05-20T22:48:06.982233" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="screenshots/saucedemo/2024.05.20_22.48.03/TC006/2-Login%20Preenchido.jpg"&gt;&lt;img src="screenshots/saucedemo/2024.05.20_22.48.03/TC006/2-Login%20Preenchido.jpg" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>screenshots/saucedemo/${date}/${TEST_NAME}/${screenshot_name}.jpg</arg>
 <doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<status status="PASS" start="2024-05-20T21:04:45.792940" elapsed="0.312794"/>
+<status status="PASS" start="2024-05-20T22:48:06.713276" elapsed="0.269261"/>
 </kw>
 <arg>2-Login Preenchido</arg>
-<status status="PASS" start="2024-05-20T21:04:45.789473" elapsed="0.316547"/>
+<status status="PASS" start="2024-05-20T22:48:06.712616" elapsed="0.270096"/>
 </kw>
 <kw name="Clicar no botao Login" owner="login_page">
 <kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2024-05-20T21:04:46.108089" level="INFO">Clicking button 'id=login-button'.</msg>
+<msg time="2024-05-20T22:48:06.984012" level="INFO">Clicking button 'id=login-button'.</msg>
 <arg>${btn_login}</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2024-05-20T21:04:46.107388" elapsed="0.129026"/>
+<status status="PASS" start="2024-05-20T22:48:06.983579" elapsed="0.104278"/>
 </kw>
-<status status="PASS" start="2024-05-20T21:04:46.106675" elapsed="0.130060"/>
+<status status="PASS" start="2024-05-20T22:48:06.983096" elapsed="0.105053"/>
 </kw>
 <kw name="Element Text Should Be" owner="SeleniumLibrary">
-<msg time="2024-05-20T21:04:46.238046" level="INFO">Verifying element 'css=.title' contains exact text 'Products'.</msg>
+<msg time="2024-05-20T22:48:07.089168" level="INFO">Verifying element 'css=.title' contains exact text 'Products'.</msg>
 <arg>${titulo_secao}</arg>
 <arg>Products</arg>
 <doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
-<status status="PASS" start="2024-05-20T21:04:46.237427" elapsed="0.035722"/>
+<status status="PASS" start="2024-05-20T22:48:07.088441" elapsed="0.027755"/>
 </kw>
 <kw name="Tirar Screenshot" owner="base_page">
-<kw name="Get Current Date" owner="DateTime">
-<msg time="2024-05-20T21:04:46.275095" level="INFO">${date} = 2024-05-20 21:04:46.275</msg>
-<var>${date}</var>
-<doc>Returns current local or UTC time with an optional increment.</doc>
-<status status="PASS" start="2024-05-20T21:04:46.274568" elapsed="0.000775"/>
-</kw>
-<kw name="Convert Date" owner="DateTime">
-<msg time="2024-05-20T21:04:46.276015" level="INFO">${date} = 2024.05.20_21.04</msg>
-<var>${date}</var>
-<arg>${date}</arg>
-<arg>result_format=%Y.%m.%d_%H.%M</arg>
-<doc>Converts between supported `date formats`.</doc>
-<status status="PASS" start="2024-05-20T21:04:46.275604" elapsed="0.000524"/>
-</kw>
 <kw name="Capture Page Screenshot" owner="SeleniumLibrary">
-<msg time="2024-05-20T21:04:46.795737" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="screenshots/Selecionar%20Mochila/2024.05.20_21.04/3-Lista%20de%20Produtos.jpg"&gt;&lt;img src="screenshots/Selecionar%20Mochila/2024.05.20_21.04/3-Lista%20de%20Produtos.jpg" width="800px"&gt;&lt;/a&gt;</msg>
-<arg>screenshots/${TEST_NAME}/${date}/${screenshot_name}.jpg</arg>
+<msg time="2024-05-20T22:48:07.573631" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="screenshots/saucedemo/2024.05.20_22.48.03/TC006/3-Lista%20de%20Produtos.jpg"&gt;&lt;img src="screenshots/saucedemo/2024.05.20_22.48.03/TC006/3-Lista%20de%20Produtos.jpg" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>screenshots/saucedemo/${date}/${TEST_NAME}/${screenshot_name}.jpg</arg>
 <doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<status status="PASS" start="2024-05-20T21:04:46.276304" elapsed="0.519791"/>
+<status status="PASS" start="2024-05-20T22:48:07.117260" elapsed="0.456801"/>
 </kw>
 <arg>3-Lista de Produtos</arg>
-<status status="PASS" start="2024-05-20T21:04:46.273854" elapsed="0.522623"/>
+<status status="PASS" start="2024-05-20T22:48:07.116782" elapsed="0.457576"/>
 </kw>
 <kw name="Clicar no produto" owner="inventory_page">
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-05-20T21:04:46.798277" level="INFO">Clicking element 'css=img[alt="Sauce Labs Backpack"]'.</msg>
+<msg time="2024-05-20T22:48:07.576319" level="INFO">Clicking element 'css=img[alt="Test.allTheThings() T-Shirt (Red)"]'.</msg>
 <arg>css=img[alt="${product_name}"]</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-05-20T21:04:46.797575" elapsed="0.090953"/>
+<status status="PASS" start="2024-05-20T22:48:07.575552" elapsed="0.083659"/>
 </kw>
-<arg>Sauce Labs Backpack</arg>
-<status status="PASS" start="2024-05-20T21:04:46.796878" elapsed="0.091934"/>
+<arg>${product_name}</arg>
+<status status="PASS" start="2024-05-20T22:48:07.574762" elapsed="0.085599"/>
 </kw>
 <kw name="Element Text Should Be" owner="SeleniumLibrary">
-<msg time="2024-05-20T21:04:46.889989" level="INFO">Verifying element 'css=div.inventory_details_name.large_size' contains exact text 'Sauce Labs Backpack'.</msg>
+<msg time="2024-05-20T22:48:07.661343" level="INFO">Verifying element 'css=div.inventory_details_name.large_size' contains exact text 'Test.allTheThings() T-Shirt (Red)'.</msg>
 <arg>${inventory_item_product_name}</arg>
-<arg>Sauce Labs Backpack</arg>
+<arg>${product_name}</arg>
 <doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
-<status status="PASS" start="2024-05-20T21:04:46.889464" elapsed="0.029442"/>
+<status status="PASS" start="2024-05-20T22:48:07.660701" elapsed="0.025325"/>
 </kw>
 <kw name="Element Text Should Be" owner="SeleniumLibrary">
-<msg time="2024-05-20T21:04:46.920073" level="INFO">Verifying element 'css=div.inventory_details_price' contains exact text '$29.99'.</msg>
+<msg time="2024-05-20T22:48:07.686671" level="INFO">Verifying element 'css=div.inventory_details_price' contains exact text '$15.99'.</msg>
 <arg>${inventory_item_product_price}</arg>
-<arg>$29.99</arg>
+<arg>${product_price}</arg>
 <doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
-<status status="PASS" start="2024-05-20T21:04:46.919603" elapsed="0.016851"/>
+<status status="PASS" start="2024-05-20T22:48:07.686334" elapsed="0.016650"/>
 </kw>
 <kw name="Tirar Screenshot" owner="base_page">
-<kw name="Get Current Date" owner="DateTime">
-<msg time="2024-05-20T21:04:46.937833" level="INFO">${date} = 2024-05-20 21:04:46.938</msg>
-<var>${date}</var>
-<doc>Returns current local or UTC time with an optional increment.</doc>
-<status status="PASS" start="2024-05-20T21:04:46.937413" elapsed="0.000580"/>
-</kw>
-<kw name="Convert Date" owner="DateTime">
-<msg time="2024-05-20T21:04:46.938553" level="INFO">${date} = 2024.05.20_21.04</msg>
-<var>${date}</var>
-<arg>${date}</arg>
-<arg>result_format=%Y.%m.%d_%H.%M</arg>
-<doc>Converts between supported `date formats`.</doc>
-<status status="PASS" start="2024-05-20T21:04:46.938218" elapsed="0.000431"/>
-</kw>
 <kw name="Capture Page Screenshot" owner="SeleniumLibrary">
-<msg time="2024-05-20T21:04:47.354732" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="screenshots/Selecionar%20Mochila/2024.05.20_21.04/4-Detalhes%20do%20Produto.jpg"&gt;&lt;img src="screenshots/Selecionar%20Mochila/2024.05.20_21.04/4-Detalhes%20do%20Produto.jpg" width="800px"&gt;&lt;/a&gt;</msg>
-<arg>screenshots/${TEST_NAME}/${date}/${screenshot_name}.jpg</arg>
+<msg time="2024-05-20T22:48:08.114811" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="screenshots/saucedemo/2024.05.20_22.48.03/TC006/4-Detalhes%20do%20Produto.jpg"&gt;&lt;img src="screenshots/saucedemo/2024.05.20_22.48.03/TC006/4-Detalhes%20do%20Produto.jpg" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>screenshots/saucedemo/${date}/${TEST_NAME}/${screenshot_name}.jpg</arg>
 <doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<status status="PASS" start="2024-05-20T21:04:46.938808" elapsed="0.416404"/>
+<status status="PASS" start="2024-05-20T22:48:07.703701" elapsed="0.411416"/>
 </kw>
 <arg>4-Detalhes do Produto</arg>
-<status status="PASS" start="2024-05-20T21:04:46.936919" elapsed="0.418722"/>
+<status status="PASS" start="2024-05-20T22:48:07.703303" elapsed="0.411990"/>
 </kw>
 <kw name="Clicar no botao &quot;Add do cart&quot;" owner="inventory_item_page">
 <kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2024-05-20T21:04:47.357771" level="INFO">Clicking button 'css=button.btn.btn_primary.btn_small.btn_inventory'.</msg>
+<msg time="2024-05-20T22:48:08.116180" level="INFO">Clicking button 'css=button.btn.btn_primary.btn_small.btn_inventory'.</msg>
 <arg>${btn_add_to_cart}</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2024-05-20T21:04:47.357077" elapsed="0.075296"/>
+<status status="PASS" start="2024-05-20T22:48:08.115904" elapsed="0.055598"/>
 </kw>
-<status status="PASS" start="2024-05-20T21:04:47.356418" elapsed="0.076405"/>
+<status status="PASS" start="2024-05-20T22:48:08.115557" elapsed="0.056309"/>
 </kw>
 <kw name="Clicar no Carrinho" owner="base_page">
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-05-20T21:04:47.434916" level="INFO">Clicking element 'css=[data-test="shopping-cart-link"]'.</msg>
+<msg time="2024-05-20T22:48:08.173479" level="INFO">Clicking element 'css=[data-test="shopping-cart-link"]'.</msg>
 <arg>css=[data-test="shopping-cart-link"]</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-05-20T21:04:47.434461" elapsed="0.057185"/>
+<status status="PASS" start="2024-05-20T22:48:08.172892" elapsed="0.054088"/>
 </kw>
 <kw name="Wait Until Element Contains" owner="SeleniumLibrary">
 <arg>css=[data-test="title"]</arg>
 <arg>Your Cart</arg>
 <arg>${timeout}</arg>
 <doc>Waits until the element ``locator`` contains ``text``.</doc>
-<status status="PASS" start="2024-05-20T21:04:47.491986" elapsed="0.028567"/>
+<status status="PASS" start="2024-05-20T22:48:08.227451" elapsed="0.025058"/>
 </kw>
-<status status="PASS" start="2024-05-20T21:04:47.433611" elapsed="0.087192"/>
+<status status="PASS" start="2024-05-20T22:48:08.172283" elapsed="0.080442"/>
 </kw>
 <kw name="Element Text Should Be" owner="SeleniumLibrary">
-<msg time="2024-05-20T21:04:47.521600" level="INFO">Verifying element 'css=.title' contains exact text 'Your Cart'.</msg>
+<msg time="2024-05-20T22:48:08.253200" level="INFO">Verifying element 'css=.title' contains exact text 'Your Cart'.</msg>
 <arg>${titulo_secao}</arg>
 <arg>Your Cart</arg>
 <doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
-<status status="PASS" start="2024-05-20T21:04:47.521239" elapsed="0.015157"/>
+<status status="PASS" start="2024-05-20T22:48:08.252919" elapsed="0.014642"/>
 </kw>
 <kw name="Element Text Should Be" owner="SeleniumLibrary">
-<msg time="2024-05-20T21:04:47.537175" level="INFO">Verifying element 'css=div.inventory_item_name' contains exact text 'Sauce Labs Backpack'.</msg>
+<msg time="2024-05-20T22:48:08.268161" level="INFO">Verifying element 'css=div.inventory_item_name' contains exact text 'Test.allTheThings() T-Shirt (Red)'.</msg>
 <arg>${cart_product_name}</arg>
-<arg>Sauce Labs Backpack</arg>
+<arg>${product_name}</arg>
 <doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
-<status status="PASS" start="2024-05-20T21:04:47.536787" elapsed="0.017854"/>
+<status status="PASS" start="2024-05-20T22:48:08.267847" elapsed="0.018839"/>
 </kw>
 <kw name="Element Text Should Be" owner="SeleniumLibrary">
-<msg time="2024-05-20T21:04:47.555820" level="INFO">Verifying element 'css=div.inventory_item_price' contains exact text '$29.99'.</msg>
+<msg time="2024-05-20T22:48:08.287276" level="INFO">Verifying element 'css=div.inventory_item_price' contains exact text '$15.99'.</msg>
 <arg>${cart_product_price}</arg>
-<arg>$29.99</arg>
+<arg>${product_price}</arg>
 <doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
-<status status="PASS" start="2024-05-20T21:04:47.555202" elapsed="0.022080"/>
+<status status="PASS" start="2024-05-20T22:48:08.286966" elapsed="0.015534"/>
 </kw>
 <kw name="Element Text Should Be" owner="SeleniumLibrary">
-<msg time="2024-05-20T21:04:47.578119" level="INFO">Verifying element 'css=div.cart_quantity' contains exact text '1'.</msg>
+<msg time="2024-05-20T22:48:08.303079" level="INFO">Verifying element 'css=div.cart_quantity' contains exact text '1'.</msg>
 <arg>${cart_product_quantity}</arg>
 <arg>1</arg>
 <doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
-<status status="PASS" start="2024-05-20T21:04:47.577758" elapsed="0.015509"/>
+<status status="PASS" start="2024-05-20T22:48:08.302782" elapsed="0.015088"/>
 </kw>
 <kw name="Tirar Screenshot" owner="base_page">
-<kw name="Get Current Date" owner="DateTime">
-<msg time="2024-05-20T21:04:47.594660" level="INFO">${date} = 2024-05-20 21:04:47.595</msg>
-<var>${date}</var>
-<doc>Returns current local or UTC time with an optional increment.</doc>
-<status status="PASS" start="2024-05-20T21:04:47.594331" elapsed="0.000480"/>
-</kw>
-<kw name="Convert Date" owner="DateTime">
-<msg time="2024-05-20T21:04:47.595352" level="INFO">${date} = 2024.05.20_21.04</msg>
-<var>${date}</var>
-<arg>${date}</arg>
-<arg>result_format=%Y.%m.%d_%H.%M</arg>
-<doc>Converts between supported `date formats`.</doc>
-<status status="PASS" start="2024-05-20T21:04:47.595006" elapsed="0.000457"/>
-</kw>
 <kw name="Capture Page Screenshot" owner="SeleniumLibrary">
-<msg time="2024-05-20T21:04:47.878434" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="screenshots/Selecionar%20Mochila/2024.05.20_21.04/5-Carrinho.jpg"&gt;&lt;img src="screenshots/Selecionar%20Mochila/2024.05.20_21.04/5-Carrinho.jpg" width="800px"&gt;&lt;/a&gt;</msg>
-<arg>screenshots/${TEST_NAME}/${date}/${screenshot_name}.jpg</arg>
+<msg time="2024-05-20T22:48:08.570514" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="screenshots/saucedemo/2024.05.20_22.48.03/TC006/5-Carrinho.jpg"&gt;&lt;img src="screenshots/saucedemo/2024.05.20_22.48.03/TC006/5-Carrinho.jpg" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>screenshots/saucedemo/${date}/${TEST_NAME}/${screenshot_name}.jpg</arg>
 <doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<status status="PASS" start="2024-05-20T21:04:47.595746" elapsed="0.283142"/>
+<status status="PASS" start="2024-05-20T22:48:08.318534" elapsed="0.252457"/>
 </kw>
 <arg>5-Carrinho</arg>
-<status status="PASS" start="2024-05-20T21:04:47.593863" elapsed="0.285346"/>
+<status status="PASS" start="2024-05-20T22:48:08.318186" elapsed="0.252997"/>
 </kw>
 <kw name="Realizar Logout" owner="base_page">
 <kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2024-05-20T21:04:47.881246" level="INFO">Clicking button 'id=react-burger-menu-btn'.</msg>
+<msg time="2024-05-20T22:48:08.572385" level="INFO">Clicking button 'id=react-burger-menu-btn'.</msg>
 <arg>id=react-burger-menu-btn</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2024-05-20T21:04:47.880855" elapsed="0.074792"/>
+<status status="PASS" start="2024-05-20T22:48:08.572057" elapsed="0.053439"/>
 </kw>
 <kw name="Click Link" owner="SeleniumLibrary">
-<msg time="2024-05-20T21:04:47.956619" level="INFO">Clicking link 'id=logout_sidebar_link'.</msg>
+<msg time="2024-05-20T22:48:08.626261" level="INFO">Clicking link 'id=logout_sidebar_link'.</msg>
 <arg>id=logout_sidebar_link</arg>
 <doc>Clicks a link identified by ``locator``.</doc>
-<status status="PASS" start="2024-05-20T21:04:47.956083" elapsed="0.127013"/>
+<status status="PASS" start="2024-05-20T22:48:08.625886" elapsed="0.117087"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>css=.login_logo</arg>
 <arg>${timeout}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-05-20T21:04:48.083549" elapsed="0.016957"/>
+<status status="PASS" start="2024-05-20T22:48:08.743270" elapsed="0.015366"/>
 </kw>
-<status status="PASS" start="2024-05-20T21:04:47.880246" elapsed="0.220487"/>
+<status status="PASS" start="2024-05-20T22:48:08.571540" elapsed="0.187310"/>
+</kw>
+<arg>Test.allTheThings() T-Shirt (Red)</arg>
+<arg>$15.99</arg>
+<status status="PASS" start="2024-05-20T22:48:06.008103" elapsed="2.750860"/>
 </kw>
 <kw name="Fechar navegador" owner="base_page" type="TEARDOWN">
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2024-05-20T21:04:48.603347" level="INFO">Slept 500 milliseconds.</msg>
+<msg time="2024-05-20T22:48:09.261090" level="INFO">Slept 500 milliseconds.</msg>
 <arg>500ms</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-05-20T21:04:48.101717" elapsed="0.501978"/>
+<status status="PASS" start="2024-05-20T22:48:08.760162" elapsed="0.501205"/>
 </kw>
 <kw name="Close Browser" owner="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2024-05-20T21:04:48.603955" elapsed="0.242271"/>
+<status status="PASS" start="2024-05-20T22:48:09.261605" elapsed="0.169360"/>
 </kw>
-<status status="PASS" start="2024-05-20T21:04:48.101261" elapsed="0.745828"/>
+<status status="PASS" start="2024-05-20T22:48:08.759622" elapsed="0.671764"/>
 </kw>
-<status status="PASS" start="2024-05-20T21:04:42.242091" elapsed="6.605470"/>
+<status status="PASS" start="2024-05-20T22:48:03.748715" elapsed="5.683081"/>
 </test>
-<status status="PASS" start="2024-05-20T21:04:42.078092" elapsed="6.771521"/>
+<status status="PASS" start="2024-05-20T22:48:03.737338" elapsed="5.695759"/>
+</suite>
+<status status="PASS" start="2024-05-20T22:48:03.568378" elapsed="5.866541"/>
 </suite>
 <statistics>
 <total>
@@ -315,7 +278,8 @@
 <tag>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="Selecionar Produto Po">Selecionar Produto Po</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="Po">Po</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1" name="Selecionar Produto Po Ddt">Po.Selecionar Produto Po Ddt</stat>
 </suite>
 </statistics>
 <errors>

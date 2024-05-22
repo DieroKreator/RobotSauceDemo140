@@ -15,7 +15,7 @@ ${date}
 
 *** Keywords ***
 Abrir navegador
-    Register Keyword To Run On Failure    Tirar Screenshot
+    Register Keyword To Run On Failure    Tirar Screenshotß
     Open Browser    url=${url}    browser=${browser}
     Maximize Browser Window
     Set Browser Implicit Wait    10000ms
@@ -36,19 +36,18 @@ Realizar Logout
     Wait Until Element Is Visible    css=.login_logo    ${timeout}
 
 
-    
-
-
 Obter Data e hora
  # Ler a data e hora do Sistema Operacional
     ${date} =    Get Current Date
     ${date} =    Convert Date    ${date}    result_format=%Y.%m.%d_%H.%M.%S
+    ${date}    Set Global Variable    ${date}
+
 Tirar Screenshot    
     [Arguments]    ${screenshot_name}
     # Ler a data e hora do Sistema Operacional
-    ${date} =    Get Current Date
-    ${date} =    Convert Date    ${date}    result_format=%Y.%m.%d_%H.%M
-    Capture Page Screenshot    screenshots/${TEST_NAME}/${date}/${screenshot_name}.jpg
+    # ${date} =    Get Current Date
+    # ${date} =    Convert Date    ${date}    result_format=%Y.%m.%d_%H.%M
+    Capture Page Screenshot    screenshots/saucedemo/${date}/${TEST_NAME}/${screenshot_name}.jpg
 
     #1 - screenshots/<system_name>/<test_name>/<date>.jpg
     #2 - screenshots/<system_name>/<date>/<test_name>.jpg
