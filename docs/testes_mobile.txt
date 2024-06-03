@@ -47,3 +47,12 @@ Configuração inicial
 8 - Inspecionar o app - descobrir os seletores
 9 - Exportar o script ou seletores
 10 - Programar
+
+
+Configuração de armazenamento das seriais (Sauce Access Key)
+
+Temporária - Qualquer usuário consegue utilizar
+Set-Item -Path Env:\NomeDaVariavel -Value 'Valor'
+
+Permanente - Apenas para Administradores da máquina
+[Environment]::SetEnvironmentVariable('NomeDaVariavel','Valor')
