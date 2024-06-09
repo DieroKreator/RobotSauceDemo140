@@ -27,6 +27,12 @@ Selecionar Sauce Labs Backback
     Entao sou direcionado para pagina de login
     # 3er nivel de espera: Wait Until Keyword Succeeds    Entao sou direcionado para a pagina do produto    15x    3s    Outra Keyword
 
+Selecionar Sauce Labs Backpack Login com Enter
+    Dado que acesso o site SauceDemo
+    Quando preencho o campo usuario    standard_user
+    E preencho o campo senha    laranja
+    E pressiono a tecla Enter
+
 *** Keywords ***
 Dado que acesso o site SauceDemo    
     Open Browser    url=${url}    browser=${browser}
@@ -44,6 +50,9 @@ E preencho o campo senha
 
 E clico no botao Login
     Click Button    id=login-button
+
+E pressiono a tecla Enter
+    Press Key    css=[data-test="password"]    ENTER
 
 Entao sou direcionado para a pagina de produtos
     # Wait Until Element Is Visible     css=.title    ${timeout}
