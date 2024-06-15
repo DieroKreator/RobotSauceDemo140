@@ -57,7 +57,7 @@ E pressiono a tecla Enter
 Entao sou direcionado para a pagina de produtos
     # Wait Until Element Is Visible     css=.title    ${timeout}
     # Element Text Should Be     css=.title    Products
-    Wait Until Element Contains    css=.title    css=.title
+    Wait Until Element Contains    css=.title    Products
 
 Quando clico no produto
     [Arguments]    ${product_name}    ${product_price}
