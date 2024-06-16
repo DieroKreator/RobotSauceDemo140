@@ -25,7 +25,10 @@ Selecionar Sauce Labs Backback
     Quando clico no menu burguer
     E clico em Logout
     Entao sou direcionado para pagina de login
-    # 3er nivel de espera: Wait Until Keyword Succeeds    Entao sou direcionado para a pagina do produto    15x    3s    Outra Keyword
+    ## 3er nivel de espera: 
+    ## Wait Until Keyword Succeeds    
+    ## ...    Entao sou direcionado para a pagina do produto    
+    ## ...    15x    3s    Outra Keyword
 
 Selecionar Sauce Labs Backpack Login com Enter
     Dado que acesso o site SauceDemo
