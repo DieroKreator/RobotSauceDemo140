@@ -32,6 +32,7 @@ Clicar no Carrinho
 
 Realizar Logout
     Click Button    id=react-burger-menu-btn
+    Wait Until Element Is Visible    id=logout_sidebar_link
     Click Link    id=logout_sidebar_link
     Wait Until Element Is Visible    css=.login_logo    ${timeout}
 
