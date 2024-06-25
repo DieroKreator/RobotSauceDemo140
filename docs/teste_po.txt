@@ -1,0 +1,3 @@
+Robot Framework, com a SeleniumLibrary. Site de trainamento BlazeDemo, que simula a compra de passagens áereas (https://www.blazedemo.com)
+
+Criar o teste do fluxo de compras até o final (mensagem de Thank You). O projeto está organizado em Page Objects.
