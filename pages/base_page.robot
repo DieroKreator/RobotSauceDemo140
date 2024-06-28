@@ -16,6 +16,7 @@ ${date}
 *** Keywords ***
 Abrir navegador
     Register Keyword To Run On Failure    Tirar Screenshot
+    Obter Data e hora
     Open Browser    url=${url}    browser=${browser}
     Maximize Browser Window
     Set Browser Implicit Wait    10000ms
