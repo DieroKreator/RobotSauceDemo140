@@ -26,7 +26,7 @@ Suite Setup    Open Application    ${REMOTE_URL}
     ...    appium:connectHardwareKeyboard=${True}
     # Fim da configuração do emulador/aparelho fisico e da inicialização
 
-Test Teardown    Limpar Carrinho e Deslogar
+Test Teardown      Limpar Carrinho e Deslogar
 Suite Teardown     Close Application 
 
 *** Variables ***
@@ -47,7 +47,9 @@ Selecionar Produto
     ${img_produto} =    Set Variable     xpath=//android.widget.ImageView[@content-desc="${product_name}"]
     Click Element    ${img_produto}
     Swipe    ${470}    ${1876}    ${457}    ${1624}
+    Wait Until Element Is Visible    locator
     ${btn_adicionar_carrinho} =    Set Variable     xpath=//android.widget.Button[@content-desc="Tap to add product to cart"]
+    Wait Until Element Is Visible    ${btn_adicionar_carrinho}
     Click Element    ${btn_adicionar_carrinho}
     ${ico_carrinho} =    Set Variable     xpath=//android.widget.RelativeLayout[@content-desc="Displays number of items in your cart"]/android.widget.ImageView
     Click Element    ${ico_carrinho}
@@ -57,3 +59,6 @@ Selecionar Produto
     Element Text Should Be   ${lbl_preco_produto}    ${product_price}
 
 Limpar Carrinho e Deslogar
+    Click Element    id=com.saucelabs.mydemoapp.android:id/removeBt
+    Click Element    id=com.saucelabs.mydemoapp.android:id/menuIV
+    Click Element    xpath=//androidx.recyclerview.RecycleView[@content-desc="Recycler view for menu"]/android.View.ViewGroup[1]/android.widget.TextView[2]
