@@ -1,13 +1,3 @@
-# This sample code supports Appium Robot client >=2
-# pip install robotframework-appiumlibrary
-# Then you can paste this into a file and simply run with Robot
-#
-# Find keywords at: http://serhatbolsu.github.io/robotframework-appiumlibrary/AppiumLibrary.html
-#
-# If your tests fails saying 'did not match any elements' consider using 'wait activity' or
-# 'wait until page contains element' before a click command
-
-
 *** Settings ***
 Library           AppiumLibrary
 
@@ -34,20 +24,22 @@ ${SAUCE_USERNAME}    oauth-difarmo-123dc
 ${REMOTE_URL}    https://${SAUCE_USERNAME}:%{SAUCE_ACCESS_KEY}@ondemand.us-west-1.saucelabs.com:443/wd/hub 
  
 *** Test Cases ***
-TC001    Sauce Labs Backpack    $ 29.99
-TC002    Sauce Labs Bike Light    $ 9.99
-TC003    Sauce Labs T-Shirt    $ 15.99
-TC004    Sauce Labs Fleece Jacket    $ 49.99
-TC005    Sauce Labs Onesie    $ 7.99
-TC006    Test.sllTheThings() T-Shirt    $ 15.99
+TC001    Sauce Labs Backpack    $ 29.99    0
+TC002    Sauce Labs Bike Light    $ 9.99    0
+TC003    Sauce Labs T-Shirt    $ 15.99    0
+TC004    Sauce Labs Fleece Jacket    $ 49.99    0
+TC005    Sauce Labs Onesie    $ 7.99    1
+TC006    Test.sllTheThings() T-Shirt    $ 15.99    1
 
 *** Keywords ***
 Selecionar Produto
-    [Arguments]    ${product_name}    ${product_price}
+    [Arguments]    ${product_name}    ${product_price}    ${swipe_count}
     ${img_produto} =    Set Variable     xpath=//android.widget.ImageView[@content-desc="${product_name}"]
+    FOR    ${counter}    IN RANGE    ${swipe_count}
+        Swipe    ${470}    ${1876}    ${457}    ${1624} 
+    END
     Click Element    ${img_produto}
-    Swipe    ${470}    ${1876}    ${457}    ${1624}
-    Wait Until Element Is Visible    locator
+    Swipe    ${470}    ${1876}    ${457}    ${1624} 
     ${btn_adicionar_carrinho} =    Set Variable     xpath=//android.widget.Button[@content-desc="Tap to add product to cart"]
     Wait Until Element Is Visible    ${btn_adicionar_carrinho}
     Click Element    ${btn_adicionar_carrinho}
